@@ -1,52 +1,57 @@
-# Project Name
-> Outline a brief description of your project.
+# Load Data Analysis using Lending Club Dataset
+> Lending Club is the largest online loan marketplace, offering products like 
+       1. Personal Loans
+       2. Business Loans
+       3. Financing medical procedures
+> Borrowers can apply and access these products through an online interface
+> But lending loans to highly risky applicants can cause a very large credit loss
+> Therefore, we must identify the driving factors that are strong indicators of a loan defaulter
+
 
 
 ## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
+* [Overall Approach](#general-information)
+* [Missing Value Treatment](#technologies-used)
+* [Outlier Treatment](#conclusions)
+* [Feature Engineering](#acknowledgements)
+* [Exploratory Data Analysis (EDA)](#acknowledgements)
+* [Recommendations](#acknowledgements)
 
-<!-- You can include any other section that is pertinent to your problem -->
+## Overall Approach
+- We first load the dataset
+- Perform missing value treatment
+- Perform outlier treatment
+- Perform feature engineering
+- Perform Exploratory Data Analysis (EDA)
+- Finally, we deliver our recommendations
 
-## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
+## Missing Value Treatment
+- Dropped all the columns that had at least 30% missing values as imputing these will result in bias/de-authentication of data
+- Dropped all those rows whose respective columns had insignificant number of missing values. Dropping these will not result in data loss as the number is insignificant
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+## Outlier Treatment
+- Removing the outliers by making sure we are not losing a significant amount of data
+- We may still have some outliers in the data, which is fine.  Because, if we drop them, there will be a significant loss of data
 
-## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+## Feature Engineering
+- Continuous features have values that are absolute numbers and trying to compare the absolute numbers with "Defaulters" and "Non-defaulters" will be difficult and make no sense. Hence, we can segment these data-points within features such that each segments have data-points that are homogenous to each other, and the  segments are heterogenous amongst each other
+
+## Exploratory Data Analysis(EDA)
+- Here we performed univariate, bivariate and multivariate analysis to ultimately draw inferences about the data and provide accurate recommendations
+
+## Recommendations
+- As observed in the EDA, interest rates, loan amount,  debt to salary ratio, salary, grade of debt and term of debt are the key drivers of loan defaulting. Following are our recommendations,
+- To the applicants with low salary, high loan amount requirement, high debt to salary ratio, higher grade of debt and higher term requirement, we can approve a loan of an amount not to high but with a high interest as they are very high risky applicants
+- To the applicants with medium salary, medium loan amount requirement, medium debt to salary ratio, medium grade of debt and medium to low term requirement, we can lend a slightly higher loan amount and a slightly lower interest rate than the highly risky applicants
+- To the applicants with high salary, low loan requirement, low debt to salary ratio, low grade of debt and with a low term requirement, we can lend a higher amount as required with a standard or low interest rates as they are the least risky applicants
 
 
 ## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
-
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
-
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Created by [@aniketroy07] - feel free to contact me!
