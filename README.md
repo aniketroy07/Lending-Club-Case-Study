@@ -1,4 +1,4 @@
-# Load Data Analysis using Lending Club Dataset
+# Loan Data Analysis using Lending Club Dataset
 - Lending Club is the largest online loan marketplace, offering products like personal loans, business loans and financing medical procedures
 - Borrowers can apply and access these products through an online interface
 - But lending loans to highly risky applicants can cause a very large credit loss
